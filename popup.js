@@ -1,5 +1,5 @@
 async function generateQRCode(icsData) {
-    const qrCodeContainer = $('qrCode');
+    const qrCodeContainer = $('#qrCode');
     console.log(qrCodeContainer);
     qrCodeContainer.qrcode({
         text: icsData,
