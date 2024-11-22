@@ -23,7 +23,9 @@ END:VCALENDAR`;
 browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
     const activeTab = tabs[0];
     browser.tabs.sendMessage(activeTab.id, { action: "getEventDetails" }).then((eventDetails) => {
+        console.log(eventDetails);
         const icsData = createICS(eventDetails);
+        console.log(icsData);
         generateQRCode(icsData);
     });
 });
