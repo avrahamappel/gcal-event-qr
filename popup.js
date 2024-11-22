@@ -13,7 +13,7 @@ function createICS(eventDetails) {
 VERSION:2.0
 BEGIN:VEVENT
 SUMMARY:${eventDetails.title}
-DTSTART:${eventDetails.date}T${eventDetails.time}
+DTSTART:${eventDetails.date}${eventDetails.time}
 DESCRIPTION:${eventDetails.description}
 END:VEVENT
 END:VCALENDAR`;
