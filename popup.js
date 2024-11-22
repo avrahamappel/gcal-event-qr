@@ -1,8 +1,7 @@
 async function generateQRCode(icsData) {
-    const qrCodeContainer = document.getElementById('qrCode');
-    qrCodeContainer.innerHTML = ''; // Clear previous QR code
-
-    new QRCode(qrCodeContainer, {
+    const qrCodeContainer = $('qrCode');
+    console.log(qrCodeContainer);
+    qrCodeContainer.qrcode({
         text: icsData,
         width: 128,
         height: 128,
