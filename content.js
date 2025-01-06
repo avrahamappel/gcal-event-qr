@@ -1,11 +1,11 @@
 function extractEventDetails() {
     const title = document.querySelector('input[aria-label=Title]').value;
     const icalNodes = document.querySelectorAll('[data-ical]');
-    const date = icalNodes[0].dataset.ical;
-    const time = icalNodes[2].dataset.ical;
+    const startDate = document.querySelector('[aria-label="Start 
+    const startTime = icalNodes[2].dataset.ical;
     const description = document.querySelector('[aria-label=Description]').innerText.trim();
 
-    return { title, date, time, description };
+    return { title, startDate, startTime, description };
 }
 
 // Send event details to the popup

@@ -3,8 +3,8 @@ async function generateQRCode(icsData) {
     console.log(qrCodeContainer);
     qrCodeContainer.qrcode({
         text: icsData,
-        width: 128,
-        height: 128,
+        //width: 128,
+        //height: 128,
     });
 }
 
@@ -14,6 +14,7 @@ VERSION:2.0
 BEGIN:VEVENT
 SUMMARY:${eventDetails.title}
 DTSTART:${eventDetails.date}${eventDetails.time}
+DTEND:${eventDetails.date}${eventDetails.time}
 DESCRIPTION:${eventDetails.description}
 END:VEVENT
 END:VCALENDAR`;
